@@ -38,7 +38,7 @@ public class Student {
         return "Student:" +
                 "licensePlate='" + licensePlate + '\'' +
                 ", name='" + name + '\'' +
-                ", num=" + num +
+                ", num= " + num +
                 '.';
     }
 }
