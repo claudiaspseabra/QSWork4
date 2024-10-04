@@ -7,13 +7,13 @@ public class Test {
 
 
         System.out.println("Welcome to the [Insert name of the park here]");
-        System.out.println("1-Park the car.");
+        System.out.println("1-Park the car."); // esta a dar loop infinito
         System.out.println("2-Parking fee");
         System.out.println("3-Access information.");
         System.out.println("4-Exit.");
-
+        System.out.println("Selection your option: ");
         Scanner s = new Scanner(System.in);
-        short z = s.nextShort();
+        int z = s.nextInt();
         while (z!=4){
             switch (z){
                 case 1:

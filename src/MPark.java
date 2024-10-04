@@ -17,12 +17,13 @@ public class MPark {
         else{
             students.add(student);
             parked++;
+            System.out.println("Student parked!");
         }
     }
 
 
     public boolean checkParkingCapacity(){
-        return parked<parking.getCapacity();
+        return parked > parking.getCapacity();
     }
 
     public void chargeParkingFee(Student student, int timeSpent){
