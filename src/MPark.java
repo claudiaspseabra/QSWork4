@@ -11,7 +11,7 @@ public class MPark {
     }
 
     public void registerStudentPark(Student student){
-        if(!checkParkingCapacity()){
+        if(checkParkingCapacity()){
             System.out.println("There are no spots to park.");
         }
         else{
@@ -23,14 +23,14 @@ public class MPark {
 
 
     public boolean checkParkingCapacity(){
-        return parked > parking.getCapacity();
+        return parked >= parking.getCapacity();
     }
 
     public void chargeParkingFee(Student student, int timeSpent){
-        // check if student is parked
         if(students.contains(student)){
             double priceParked = parking.getPrice() * timeSpent;
             student.setPriceToPay(priceParked);
+            System.out.println("You need to pay: "+ priceParked + " euros for "+ timeSpent + " minutes.");
         }else{
             System.out.println("The student didnt park the car.");
         }
