@@ -75,19 +75,17 @@ public class Park {
         this.discount = discount;
     }
 
-
-
     /**
      * ToString method
      */
 
     @Override
     public String toString() {
-        return "Park{" +
-                "time=" + time +
-                ", price=" + price +
-                ", capacity=" + capacity +
-                ", discount=" + discount +
-                '}';
+        return "Park [" +
+                "Time: " + time +
+                "; Price=" + price +
+                "; Capacity=" + capacity +
+                "; Discount=" + discount +
+                ']';
     }
 }

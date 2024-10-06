@@ -3,6 +3,8 @@ public class Student {
     private String name;
     private int num;
 
+    private double paid;
+
     public Student(String licensePlate, String name, int num) {
         this.licensePlate = licensePlate;
         this.name = name;
@@ -33,12 +35,20 @@ public class Student {
         this.num = num;
     }
 
+    public double getPaid() {
+        return paid;
+    }
+
+    public void setPaid(double paid) {
+        this.paid = paid;
+    }
+
     @Override
     public String toString() {
-        return "Student:" +
-                "licensePlate='" + licensePlate + '\'' +
-                ", name='" + name + '\'' +
-                ", num= " + num +
-                '.';
+        return "Student [" +
+                "License Plate:'" + licensePlate + '\'' +
+                "; Name: '" + name + '\'' +
+                "; Number: " + num +
+                ']';
     }
 }
