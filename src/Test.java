@@ -24,7 +24,7 @@ public class Test {
                     mp.chargeParkingFee(test, 100);
                     break;
                 case "3":
-                    System.out.println("No information available.");
+                    mp.saveParkInfo();
                     break;
                 case "4":
                     return;

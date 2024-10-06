@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MPark {
@@ -36,10 +39,13 @@ public class MPark {
         }
     }
 
-    public void saveParkInfo(){
-
+    public void saveParkInfo() {
+        try(BufferedWriter licenseInfo = new BufferedWriter(new FileWriter("AllLicenseInfo.txt"))){
+            for(Student student:students){
+                licenseInfo.write(student.getLicensePlate());
+            }
+        }catch (Exception e){
+            System.out.println("Error.");
+        }
     }
-
-
-
 }
