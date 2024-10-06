@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Park park = new Park();
         ManagePark manager = new ManagePark();
 
         System.out.println("Welcome to the Sem Erros park.");

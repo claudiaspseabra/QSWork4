@@ -28,12 +28,14 @@ public class ManagePark {
                 input.nextLine();
                 double toPay = ((double) minutes / 15) * park.getPrice();
 
-                // isto não faz uma vez por mês mas pena
+                // supposed to be once a month but working every time
                 double stPaid = stPaying.getPaid();
                 stPaying.setPaid(stPaid + toPay);
                 if (checkStudentMoney(stPaying)) {
-                    double disc = park.getDiscount();
-                    toPay -= toPay * (disc / 100);
+                    toPay -= (toPay * park.getDiscount());
+                    System.out.println("Discount applied!");
+                } else {
+                    System.out.println("Discount not applied!");
                 }
                 System.out.printf("Student has to pay %.2f€.%n", toPay);
             } else {
@@ -66,7 +68,7 @@ public class ManagePark {
 
     public boolean checkStudentMoney(Student stPaying) {
         for (Student s : studentList) {
-            if (stPaying.getPaid() < s.getPaid())
+            if (s != stPaying && stPaying.getPaid() < s.getPaid())
             {
                 return false;
             }
